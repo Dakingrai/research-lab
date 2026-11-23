@@ -2,7 +2,7 @@
 
 A finished intake, for reference. internal-lens-lab is a research workspace for the Looped Lens Challenge: a Readings tab listing papers on lens methods, each with a notes page, and a Research programs tab with the challenge as a program and its projects under it.
 
-- **Live site:** https://dakingrai.github.io/internal-lens-lab/
+- **Live site:** https://internal-lens.lifeofideas.com
 - **Repository:** https://github.com/Dakingrai/internal-lens-lab
 
 ## Files

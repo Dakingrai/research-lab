@@ -4,7 +4,7 @@
 
 Fork it, describe your research to a coding agent such as [Claude Code](https://claude.com/claude-code), and it builds you a lab: a reading list with a notes page per paper, research programs with their projects, an experiment page for each experiment, and a Home page of what's running now. The look isn't a generic template. The agent runs a short *design intake*: it reads your description, asks only what it can't work out, shows you a sample page built from proposed design tokens, and builds the lab only after you accept that page. Everything it decides is written down: the brief, each decision with what it beat, short rules a coding agent can follow, and the reasoning for you.
 
-The defaults are quiet and text-first: one column, serif titles over sans metadata, rows instead of cards, colour only where it means something, dark mode for free. You can see a lab made this way at **[internal-lens-lab](https://dakingrai.github.io/internal-lens-lab/)** ([repo](https://github.com/Dakingrai/internal-lens-lab)).
+The defaults are quiet and text-first: one column, serif titles over sans metadata, rows instead of cards, colour only where it means something, dark mode for free. You can see a lab made this way at **[internal-lens-lab](https://internal-lens.lifeofideas.com)** ([repo](https://github.com/Dakingrai/internal-lens-lab)).
 
 ## Quick start
 
