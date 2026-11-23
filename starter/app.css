@@ -1,0 +1,108 @@
+/* Page styles. Tokens only; the rules followed are docs/design-rules.md (written at intake) */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:var(--fs-body)/var(--lh-body) var(--sans)}
+.wrap{max-width:var(--col-main);margin:0 auto;padding:0 var(--page-pad) var(--s-9)}
+
+/* header + tabs (rule 4) */
+.site{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:var(--s-2) var(--s-4);padding:var(--s-5) 0 var(--s-4);border-bottom:var(--border)}
+.site .name{font:500 var(--fs-body)/var(--lh-ui) var(--sans);color:var(--ink);text-decoration:none}
+/* the light/dark switch (theme.js): a text button at the right of the header's first line */
+.site .theme-switch{order:1;margin-left:auto;font:var(--fs-meta)/var(--lh-ui) var(--sans);color:var(--ink-2);background:none;border:0;padding:0;cursor:pointer;transition:color var(--dur) var(--ease)}
+.site .theme-switch:hover{color:var(--ink)}
+.site nav{order:2}
+.tabs{display:flex;gap:var(--s-5);margin:0;padding:0;list-style:none}
+.tabs a{color:var(--ink-2);text-decoration:none;padding-bottom:var(--s-2);border-bottom:2px solid transparent;transition:color var(--dur) var(--ease)}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current]{color:var(--ink);border-bottom-color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:none;border-radius:var(--radius);box-shadow:0 0 0 3px var(--interact-wash),0 0 0 4px var(--interact)}
+
+/* headings (rule 3): never bold */
+h1,h2{font-family:var(--serif);font-weight:400;line-height:var(--lh-heading);margin:0}
+h1{font-size:var(--fs-title);margin-top:var(--s-7)}
+.lede{font-size:var(--fs-lede);color:var(--ink-2);margin:var(--s-3) 0 var(--s-5)}
+
+/* masthead photograph (rules 7-12) */
+.masthead{margin:0 0 var(--s-6)}
+.masthead img{display:block;width:100%;aspect-ratio:var(--masthead-ratio);height:auto;max-height:var(--masthead-max-h);min-height:var(--masthead-min-h);object-fit:cover;border-radius:var(--radius);filter:var(--photo-dim)}
+.masthead.resources img{aspect-ratio:var(--masthead-resources-ratio);max-height:var(--masthead-resources-max-h)}
+/* a program's mark: its illustration, whole, in a left column beside the program's text (rule 42). On the
+   program's page it sits beside the title, metadata line and aim; in the list, beside the row. */
+.with-mark{display:grid;grid-template-columns:var(--mark-size) minmax(0,1fr);gap:var(--s-6);align-items:start}
+.with-mark-text{min-width:0}
+.mark{display:block;margin:0}
+.mark img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+#head{margin-top:var(--s-2)}
+#head h1{margin-top:0}
+#head.with-mark .mark{margin-top:var(--s-1)}
+.resources li.with-mark{grid-template-columns:var(--mark-size-row) minmax(0,1fr);gap:var(--s-5)}
+@media (max-width:599px){
+  .with-mark{gap:var(--s-4)}
+  #head.with-mark{grid-template-columns:var(--mark-size-page-sm) minmax(0,1fr)}
+  .resources li.with-mark{grid-template-columns:var(--mark-size-sm) minmax(0,1fr);gap:var(--s-4)}
+}
+
+/* the reading-status filter shares the count line: options left, count right (rules 13, 22-24) */
+.countline{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:var(--s-2) var(--s-4)}
+.filter{display:flex;flex-wrap:wrap;gap:var(--s-4);margin:0}
+.filter button{appearance:none;background:none;border:0;margin:0;padding:0;font:var(--fs-meta)/var(--lh-ui) var(--sans);color:var(--ink-2);cursor:pointer;transition:color var(--dur) var(--ease)}
+.filter button:hover{color:var(--ink)}
+.filter button[aria-pressed="true"]{color:var(--ink);font-weight:500}
+
+/* the list (rules 13-21) */
+.count{font-size:var(--fs-meta);color:var(--ink-3);margin:0}
+.group h2{font-size:var(--fs-h2);margin:var(--s-7) 0 var(--s-3)}
+.group h2 .n{font:var(--fs-meta)/var(--lh-ui) var(--sans);color:var(--ink-3);margin-left:var(--s-2);white-space:nowrap}
+.resources{list-style:none;margin:0;padding:0;border-top:var(--border)}
+.resources li{padding:var(--s-4) 0;border-bottom:var(--border)}
+.r-title{font:400 var(--fs-item)/var(--lh-heading) var(--serif)}
+.r-title a{color:var(--ink);text-decoration:none}
+.r-title a:hover{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
+.meta{font-size:var(--fs-meta);line-height:var(--lh-ui);color:var(--ink-2);margin-top:var(--s-1)}
+.meta a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
+.meta a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.summary{color:var(--ink-2);margin-top:var(--s-2)}
+
+/* a project's page: the research question with a rule on its left, no box or colour (rule 39) */
+.question-page{max-width:var(--col-text);font:400 var(--fs-h2)/var(--lh-heading) var(--serif);color:var(--ink);border-left:2px solid var(--rule);padding-left:var(--s-4);margin:0 0 var(--s-5)}
+.meta + .lede{margin-top:var(--s-3)}
+.meta + .masthead,.meta + #project{margin-top:var(--s-5)}
+
+/* a paper's notes page and the program and project pages: kicker, title, metadata line (rules 25-28, 38) */
+.kicker{font-size:var(--fs-meta);line-height:var(--lh-ui);color:var(--ink-3);margin:var(--s-7) 0 0}
+.kicker a{color:var(--ink-2);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
+.kicker a:hover{color:var(--ink);text-decoration-color:var(--ink)}
+.kicker + h1{margin-top:var(--s-2)}
+h1 + .meta{margin:var(--s-2) 0 0}
+.note section h2{font-size:var(--fs-h2);margin:var(--s-7) 0 var(--s-3)}
+.prose{max-width:var(--col-text);font:var(--fs-prose)/var(--lh-prose) var(--serif);color:var(--ink)}
+.prose p{margin:0 0 var(--s-4)}
+.prose b{font-weight:600}
+.prose a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
+.prose a:hover{text-decoration-color:var(--ink)}
+.prose h3{font:400 var(--fs-item)/var(--lh-heading) var(--serif);color:var(--ink);margin:var(--s-6) 0 var(--s-3)}
+.prose h3:first-child{margin-top:0}
+.prose ul{margin:0 0 var(--s-4);padding-left:var(--s-5)}
+.prose li{margin-bottom:var(--s-2)}
+
+/* citations (a.cite, set by cite.js): the colour of the text around them, faint underline, never blue */
+a.cite{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px;transition:text-decoration-color var(--dur) var(--ease)}
+a.cite:hover{color:var(--ink);text-decoration-color:var(--ink)}
+
+/* the contents list of a long page (rule 29; built by toc.js) */
+.toc{font:var(--fs-meta)/var(--lh-ui) var(--sans)}
+.toc .toc-h{color:var(--ink-3);margin:0 0 var(--s-3)}
+.toc ol{list-style:none;margin:0;padding:0}
+.toc li{margin:0 0 var(--s-3)}
+.toc ol ol{margin:var(--s-2) 0 0 var(--s-4)}
+.toc ol ol li{margin-bottom:var(--s-2)}
+.toc a{color:var(--ink-2);text-decoration:none;transition:color var(--dur) var(--ease)}
+.toc a:hover{color:var(--ink)}
+.toc a[aria-current="true"]{color:var(--ink);font-weight:500}
+main h2[id],main h3[id]{scroll-margin-top:var(--s-6)}
+.toc-side{display:none}
+.toc-top{max-width:var(--col-text);margin:var(--s-5) 0 0;padding:var(--s-4) 0;border-top:var(--border);border-bottom:var(--border)}
+.toc-top li{margin-bottom:var(--s-2)}
+@media (min-width:1280px){
+  .toc-side{--toc-w:min(200px, (100vw - var(--col-main)) / 2 - var(--s-5) - var(--page-pad));display:block;position:fixed;top:var(--s-9);left:calc((100vw - var(--col-main)) / 2 - var(--toc-w) - var(--s-5));width:var(--toc-w);max-height:calc(100vh - var(--s-9) - var(--s-6));overflow:auto}
+  .toc-top{display:none}
+}

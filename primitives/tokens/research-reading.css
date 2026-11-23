@@ -1,0 +1,80 @@
+/* Preset: research-reading. A quiet, white-first system for tools that list papers, notes, programs and projects:
+   neutral inks, serif titles over sans metadata, one column, two colours with fixed meanings (--interact: you can
+   press this; --highlight: look here) and categorical colours for figure marks only. Light and dark values for every
+   colour. Intake copies this file to apps/<name>/tokens.css, adds a header naming its source and date, and changes
+   what the app's brief requires. Use the variables, never raw hex or px. */
+:root{
+  /* neutrals */
+  --bg:#FFFFFF; --surface-sunk:#F6F6F4;
+  --ink:#1F2328; --ink-2:#5C6470; --ink-3:#8A9099;
+  --hairline:rgba(0,0,0,.10); --rule:rgba(0,0,0,.20);
+
+  /* marks: grey until something points at them */
+  --data:#B9BDC2; --data-2:#DADDE0;
+
+  /* two fixed meanings: look here / touch this (base for marks, ink for text, wash behind text) */
+  --highlight:#D15830; --highlight-ink:#A63F1C; --highlight-wash:#FBEDE7;
+  --interact:#3F7FBF;  --interact-ink:#2A5E93;  --interact-wash:#EAF2FA;
+
+  /* categorical: marks in figures only, never text or tags */
+  --cat-1:#4477AA; --cat-2:#EE6677; --cat-3:#228833; --cat-4:#CCBB44;
+
+  /* sequential: grey so it never competes with highlight */
+  --seq-1:#E6E8EA; --seq-2:#B9BDC2; --seq-3:#8A9099; --seq-4:#5C6470; --seq-5:#1F2328;
+
+  /* type: sans = instrument, serif = a thing you read */
+  --serif:Charter,"Iowan Old Style","Source Serif 4",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --fs-title:28px; --fs-lede:17px; --fs-h2:20px; --fs-item:19px; --fs-body:15px;
+  --fs-meta:13px; --fs-label:12px; --fs-code:13px;
+  --lh-body:1.5; --lh-heading:1.25; --lh-ui:1.45;
+
+  /* layout: one column; section headings and rows share it */
+  --col-main:880px; --col-text:680px; --page-pad:16px;
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px;
+  /* prose: a document read in the tool (a project page's summary) */
+  --fs-prose:18px; --lh-prose:1.6;
+
+  /* photographs: one masthead per tab, a short wide band; dimmed a little in dark mode */
+  --masthead-ratio:10 / 3; --masthead-max-h:264px; --masthead-min-h:150px; --photo-dim:none;
+  /* an optional taller cut for a list tab whose photograph needs more height */
+  --masthead-resources-ratio:3 / 1; --masthead-resources-max-h:293px;
+  /* a program's mark: its own illustration, shown whole on its page */
+  --mark-size:150px; --mark-size-row:192px; --mark-size-sm:128px; --mark-size-page-sm:96px;   /* page, list row, list row on a phone, page on a phone */
+
+  /* shape, motion */
+  --radius:3px; --border:1px solid var(--hairline);
+  --shadow-pop:0 2px 8px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.06);
+  --dur:150ms; --dur-layout:300ms; --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+@media (max-width:767px){
+  :root{ --fs-title:24px; --fs-lede:16px; --fs-h2:19px; --fs-item:17px; --fs-prose:17px; }
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171A; --surface-sunk:#1D2024;
+    --ink:#E9E7E1; --ink-2:#A2A7AD; --ink-3:#7D838A;
+    --hairline:rgba(255,255,255,.10); --rule:rgba(255,255,255,.20);
+    --data:#5C6470; --data-2:#3A3F46;
+    --highlight:#E8743F; --highlight-ink:#F0A383; --highlight-wash:#3A2419;
+    --interact:#6FA3DC;  --interact-ink:#9CC2EA;  --interact-wash:#1B2B3C;
+    --seq-1:#2A2E33; --seq-2:#4A5058; --seq-3:#7D838A; --seq-4:#A2A7AD; --seq-5:#E9E7E1;
+    --shadow-pop:0 2px 8px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);
+    --photo-dim:brightness(.82) contrast(1.04);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171A; --surface-sunk:#1D2024;
+  --ink:#E9E7E1; --ink-2:#A2A7AD; --ink-3:#7D838A;
+  --hairline:rgba(255,255,255,.10); --rule:rgba(255,255,255,.20);
+  --data:#5C6470; --data-2:#3A3F46;
+  --highlight:#E8743F; --highlight-ink:#F0A383; --highlight-wash:#3A2419;
+  --interact:#6FA3DC;  --interact-ink:#9CC2EA;  --interact-wash:#1B2B3C;
+  --seq-1:#2A2E33; --seq-2:#4A5058; --seq-3:#7D838A; --seq-4:#A2A7AD; --seq-5:#E9E7E1;
+  --shadow-pop:0 2px 8px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.08);
+  --photo-dim:brightness(.82) contrast(1.04);
+  color-scheme:dark;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources — My lab</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="name" href="index.html">My lab</a>
+  <nav aria-label="Tabs"><ul class="tabs">
+    <li><a href="index.html" aria-current="page">Resources</a></li>
+    <li><a href="programs.html">Research programs</a></li>
+  </ul></nav>
+</header>
+
+<main>
+<h1>Resources</h1>
+<p class="lede">Papers and posts this lab reads, grouped by topic.</p>
+
+<!-- Optional: one photograph for this tab, as a short band (design rules 7-12):
+<figure class="masthead resources">
+  <img src="images/masthead-resources-880.jpg" srcset="images/masthead-resources-880.jpg 880w, images/masthead-resources-1760.jpg 1760w" sizes="(min-width: 912px) 880px, calc(100vw - 32px)" width="1760" height="587" alt="One plain sentence describing the picture.">
+</figure>
+-->
+
+<div class="countline">
+  <div class="filter" id="filter" role="group" aria-label="Filter by reading status"></div>
+  <p class="count" id="count"></p>
+</div>
+<div id="groups"></div>
+</main>
+
+</div>
+<script src="resources.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
