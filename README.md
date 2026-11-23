@@ -31,7 +31,7 @@ The labs need no build step and no server code, so `sites/<name>/` can be publis
 ## What a lab holds
 
 - **Home**: the experiments running now, and those finished but not yet reviewed, with one line on how far each has got.
-- **Resources**: papers and posts grouped by topic, each with a summary in your own words and its own notes page; filter by what you've read.
+- **Readings**: papers and posts grouped by topic, each with a summary in your own words and its own notes page; filter by what you've read.
 - **Research programs**: each program opens onto its projects; each project has its question, its reading list and its experiments.
 - **Experiment pages**: written before the experiment runs (the claim, what you do, the competing explanations, what you expect, what would make you distrust a result), then the results. The sections follow the [experiment principles](method/experiment-principles.md).
 
@@ -57,7 +57,7 @@ The two are being built to work together: the plan is for a lab to show, from th
 | `method/brief-template.md` | The intake brief: audience, reading mode, content, which meanings need a colour, density, tone. |
 | `method/experiment-principles.md` | Four principles for designing research experiments. |
 | `primitives/tokens/` | Starting token presets (colours, type, spacing; light and dark). |
-| `starter/` | The lab every site starts from: Home, Resources with notes pages, Research programs, the experiment page template, a light/dark switch. Open `starter/home.html` to see it. |
+| `starter/` | The lab every site starts from: Home, Readings with notes pages, Research programs, the experiment page template, a light/dark switch. Open `starter/home.html` to see it. |
 | `starter/sample.html` | The sample page template shown at intake. |
 | `examples/` | A finished intake, for reference. |
 | `apps/`, `sites/` | Where your design entries and labs go. |

@@ -1,4 +1,4 @@
-/* The data for the Resources tab. One object per paper; edit by hand.
+/* The data for the Readings tab. One object per paper; edit by hand.
    Fields: title, slug (names its notes page, papers/<slug>.html), url (the paper's landing page), pdf (the PDF, or
    null), authors (full list), affiliation (first author's, or null), published (YYYY-MM-DD, YYYY-MM or YYYY), venue
    (shown as where it is published; null means it is read from the link: "arXiv <id>" or the host), section (the

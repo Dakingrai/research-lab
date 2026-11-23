@@ -30,7 +30,7 @@ window.PROGRAMS = [
         started: "2026-01",
         status: "idea",
         question: "The project's research question, as one sentence that could be answered.",
-        summary: "What the project will do and why, in one paragraph. The papers it reads are listed below under Reading, as the same rows the Resources tab shows.",
+        summary: "What the project will do and why, in one paragraph. The papers it reads are listed below under Reading, as the same rows the Readings tab shows.",
         resources: ["https://arxiv.org/abs/1706.03762"],
         experiments: [
           {
