@@ -1,6 +1,8 @@
-# design-lab
+# research-lab
 
-A lab for designing small web apps. Someone describes an app; the agent runs an intake that turns the description into a design system the person accepts (a brief, decisions, rules, tokens and a sample page), then builds the app from a starter using only that system. Later changes go through design passes. The method was worked out on research tools (paper lists, notes, programs and projects) and applies best to apps of that kind; for others, depart from the house rules where they do not fit and say why.
+A template for a research workspace: someone forks it and describes their research, and the agent builds them a lab (Home of running experiments, Resources with notes pages, Research programs with projects and experiments). The lab's look comes from a design intake that turns the description into a design system the person accepts (a brief, decisions, rules, tokens and a sample page); the lab is then built from `starter/` using only that system. Later changes go through design passes. The method was worked out on research tools and applies best to them; for other kinds of app, depart from the house rules where they do not fit and say why.
+
+Life of Ideas (`loi`, github.com/Dakingrai/life-of-ideas) is the companion tool that backs up the coding-agent sessions behind a repo to a private local store. A lab may later show that record through an export the person runs; never read the store directly from a page, and never publish it without being asked.
 
 ## Commands
 
