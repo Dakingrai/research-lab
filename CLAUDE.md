@@ -16,7 +16,7 @@ If someone asks for a new app or a visual change without using a command, follow
 - `method/brief-template.md` — the intake brief.
 - `method/experiment-principles.md` — four principles for designing experiments, for research apps that plan them. Not part of design intake.
 - `primitives/tokens/` — starting token presets. `research-reading.css` is the one there is today.
-- `starter/` — the app intake copies to build a site: plain HTML, CSS and vanilla JS, no build step, data in hand-edited JS files. A list tab with notes pages (`index.html`, `resources.js`, `papers/`), a programs tab (`programs.html`, `program.html`, `project.html`, `programs.js`), a light/dark switch, contents lists and citation links for long pages. `starter/sample.html` is the sample page template.
+- `starter/` — the app intake copies to build a site: plain HTML, CSS and vanilla JS, no build step, data in hand-edited JS files. A Home tab of the experiments running now or waiting for review (`home.html`), a list tab with notes pages (`index.html`, `resources.js`, `papers/`), a programs tab (`programs.html`, `program.html`, `project.html`, `programs.js`) where each project lists its experiments, an experiment page per experiment (`experiments/template.html`, with sections that follow `method/experiment-principles.md`), a light/dark switch, contents lists and citation links for long pages. `starter/sample.html` is the sample page template.
 - `examples/internal-lens-lab/` — a finished intake: the brief and the rules it produced, with a link to the live site.
 - `apps/<name>/` — one folder per app's design entry, written by intake.
 - `sites/<name>/` — the apps themselves, scaffolded by intake, unless the person asks for another location.

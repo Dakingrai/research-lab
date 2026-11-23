@@ -73,7 +73,7 @@
 
   var side = build('toc-side'), top = build('toc-top');
   main.parentNode.appendChild(side);
-  var after = main.querySelector('.lede') || main.querySelector('.meta') || main.querySelector('h1');
+  var after = main.querySelector('.progress-block:not([hidden])') || main.querySelector('.lede') || main.querySelector('.meta') || main.querySelector('h1');
   if (after) after.parentNode.insertBefore(top, after.nextSibling);
   else main.insertBefore(top, main.firstChild);
 

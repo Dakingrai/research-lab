@@ -106,3 +106,21 @@ main h2[id],main h3[id]{scroll-margin-top:var(--s-6)}
   .toc-side{--toc-w:min(200px, (100vw - var(--col-main)) / 2 - var(--s-5) - var(--page-pad));display:block;position:fixed;top:var(--s-9);left:calc((100vw - var(--col-main)) / 2 - var(--toc-w) - var(--s-5));width:var(--toc-w);max-height:calc(100vh - var(--s-9) - var(--s-6));overflow:auto}
   .toc-top{display:none}
 }
+
+/* experiments (rules 47-54): rows on a project's page; on Home grouped by project, the program's mark in a left
+   column, each experiment with how far it has got as a line and a sentence, never a bar (house rule H3) */
+.prog-line{margin:var(--s-2) 0 0}
+.prog-now{margin:var(--s-1) 0 0;color:var(--ink)}
+.home-group{margin-top:var(--s-7)}
+.home-group.with-mark{grid-template-columns:var(--mark-size-home) minmax(0,1fr);gap:var(--s-5)}
+.home-group h2{font:400 var(--fs-h2)/var(--lh-heading) var(--serif);margin:0}
+.home-group h2 a{color:var(--ink);text-decoration:none}
+.home-group h2 a:hover{text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;text-decoration-thickness:1px}
+.home-group .resources{margin-top:var(--s-3)}
+@media (max-width:599px){
+  .home-group.with-mark{grid-template-columns:var(--mark-size-home-sm) minmax(0,1fr);gap:var(--s-4)}
+}
+/* an experiment's page: its progress under the metadata line, between hairlines, then hand-written sections */
+.progress-block{max-width:var(--col-text);margin:var(--s-5) 0 0;padding:var(--s-3) 0 var(--s-4);border-top:var(--border);border-bottom:var(--border)}
+.progress-block .prog-line{margin-top:0}
+.progress-block + .toc-top{border-top:0;margin-top:0}   /* the contents list follows the progress; one hairline between them */

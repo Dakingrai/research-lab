@@ -64,7 +64,7 @@ On acceptance, set the brief's status to *accepted <date>* and the tokens header
 
 1. Copy `starter/` to `sites/<name>/` (or where the person asks). Copy `apps/<name>/tokens.css` over the starter's `tokens.css`, and `apps/<name>/rules.md` to `sites/<name>/docs/design-rules.md`.
 2. Set the site name in every page's header and the `SITE` constant at the top of `app.js`.
-3. Keep only the pages the brief names. The starter has a list tab (`index.html`, data in `resources.js`, a notes page per item in `papers/`) and a programs tab (`programs.html`, `program.html`, `project.html`, data in `programs.js`). Delete what the app does not need, rename tabs, and build any new page from the same row, heading and prose styles.
+3. Keep only the pages the brief names. The starter has a Home tab of running experiments (`home.html`), a list tab (`index.html`, data in `resources.js`, a notes page per item in `papers/`), a programs tab (`programs.html`, `program.html`, `project.html`, data in `programs.js`), and an experiment page per experiment (`experiments/`, copied from `experiments/template.html`). Delete what the app does not need, rename tabs, and build any new page from the same row, heading and prose styles.
 4. Seed the data files with what the description gives; never invent items the person did not mention. Mark seeded prose as a first draft.
 5. Write `sites/<name>/CLAUDE.md`: what the app is, where things are, how to add an item, and "read `docs/design-rules.md` before changing anything visual".
 6. Open every page in the browser at full width and 375px, light and dark. Check the console for errors and that nothing scrolls sideways. Go through the rules' checklist.

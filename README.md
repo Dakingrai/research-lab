@@ -4,7 +4,7 @@
 
 design-lab is a small, opinionated method for designing web apps with a coding agent such as [Claude Code](https://claude.com/claude-code). Instead of letting the agent improvise a look, it runs an *intake*: it reads your description, asks only what it can't work out, shows you a sample page built from proposed design tokens, and builds the app only after you accept that page. Everything it decides is written down: the brief, each decision with what it beat, short rules a coding agent can follow, and the reasoning for you.
 
-It grew out of building research tools (reading lists, paper notes, research programs and projects), so its defaults are quiet and text-first: one column, serif titles over sans metadata, rows instead of cards, colour only where it means something, dark mode for free. You can see an app made this way at **[internal-lens-lab](https://dakingrai.github.io/internal-lens-lab/)** ([repo](https://github.com/Dakingrai/internal-lens-lab)).
+It grew out of building research tools (reading lists, paper notes, research programs and projects), so its defaults are quiet and text-first: one column, serif titles over sans metadata, rows instead of cards, colour only where it means something, dark mode for free. Its starter app tracks research from reading to experiments: papers with notes, programs and projects, and a Home page of the experiments running now. You can see an app made this way at **[internal-lens-lab](https://dakingrai.github.io/internal-lens-lab/)** ([repo](https://github.com/Dakingrai/internal-lens-lab)).
 
 ## Quick start
 
@@ -37,7 +37,7 @@ The apps need no build step and no server code, so `sites/<name>/` can be publis
 | `method/brief-template.md` | The intake brief: audience, reading mode, content, which meanings need a colour, density, tone. |
 | `method/experiment-principles.md` | Four principles for designing research experiments, for research apps that plan them. |
 | `primitives/tokens/` | Starting token presets (colours, type, spacing; light and dark). |
-| `starter/` | The app every site starts from: a list tab with notes pages, a programs tab, a light/dark switch. Open `starter/index.html` to see it. |
+| `starter/` | The app every site starts from: a Home tab of running experiments, a list tab with notes pages, a programs tab where projects list their experiments, an experiment page template, a light/dark switch. Open `starter/home.html` to see it. |
 | `starter/sample.html` | The sample page template shown at intake. |
 | `examples/` | A finished intake, for reference. |
 | `apps/`, `sites/` | Where your design entries and apps go. |

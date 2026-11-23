@@ -41,7 +41,7 @@
   /* an optional taller cut for a list tab whose photograph needs more height */
   --masthead-resources-ratio:3 / 1; --masthead-resources-max-h:293px;
   /* a program's mark: its own illustration, shown whole on its page */
-  --mark-size:150px; --mark-size-row:192px; --mark-size-sm:128px; --mark-size-page-sm:96px;   /* page, list row, list row on a phone, page on a phone */
+  --mark-size:150px; --mark-size-row:192px; --mark-size-sm:128px; --mark-size-page-sm:96px; --mark-size-home:96px; --mark-size-home-sm:64px;   /* page, list row, list row on a phone, page on a phone */
 
   /* shape, motion */
   --radius:3px; --border:1px solid var(--hairline);
